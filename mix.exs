@@ -29,7 +29,9 @@ defmodule LoudMouthPlatform.Mixfile do
       # Coverage report tool for Elixir with coveralls.io integration
       {:excoveralls, "~> 0.5", only: :test},
       # A static code analysis tool for the Elixir language with a focus on code consistency and teaching
-      {:credo, "~> 0.4", only: [:dev, :test]}
+      {:credo, "~> 0.4", only: [:dev, :test]},
+      # Automatically run your Elixir project's tests each time you save a file
+      {:mix_test_watch, "~> 0.2", only: :dev},
     ]
   end
 end
