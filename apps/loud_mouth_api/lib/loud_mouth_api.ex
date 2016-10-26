@@ -1,4 +1,7 @@
 defmodule LoudMouthAPI do
+  @moduledoc """
+  An HTTP/JSON API interface for the LoudMouth domain.
+  """
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
