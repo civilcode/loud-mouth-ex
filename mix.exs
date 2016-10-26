@@ -7,6 +7,7 @@ defmodule LoudMouthPlatform.Mixfile do
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       deps: deps,
+      aliases: aliases,
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: ["coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test]
     ]
@@ -34,4 +35,10 @@ defmodule LoudMouthPlatform.Mixfile do
       {:mix_test_watch, "~> 0.2", only: :dev},
     ]
   end
+
+  defp aliases do
+     [
+       "project.check": ["coveralls --umbrella", "credo"],
+     ]
+   end
 end
