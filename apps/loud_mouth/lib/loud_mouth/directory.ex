@@ -12,6 +12,7 @@ defmodule LoudMouth.Directory do
   end
 
   def fetch_person_by_email(email) do
-    Repo.get_by(Person, email: email)
+    Person
+    |> Repo.get_by(email: email)
   end
 end
