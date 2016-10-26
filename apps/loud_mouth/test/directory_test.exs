@@ -1,5 +1,5 @@
 defmodule LoudMouth.DirectoryTest do
-  use ExUnit.Case
+  use LoudMouth.Case
 
   alias LoudMouth.Directory
   alias LoudMouth.Directory.Person

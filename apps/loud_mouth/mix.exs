@@ -13,6 +13,8 @@ defmodule LoudMouth.Mixfile do
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       deps: deps,
+      aliases: aliases,
+      elixirc_paths: elixirc_paths(Mix.env),
       test_coverage: [tool: ExCoveralls]
     ]
   end
@@ -21,9 +23,12 @@ defmodule LoudMouth.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :ecto, :postgrex],
      mod: {LoudMouth, []}]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib"]
 
   # Dependencies can be Hex packages:
   #
@@ -39,6 +44,20 @@ defmodule LoudMouth.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      # PostgreSQL driver for Elixir
+      {:postgrex, ">= 0.0.0"},
+      # A database wrapper and language integrated query for Elixir
+      {:ecto, "~> 2.0.0"}
+    ]
+  end
+
+  defp aliases do
+    [
+      "ecto.setup": ["ecto.create", "ecto.migrate", "ecto.seed"],
+      "ecto.seed": ["run priv/repo/seeds.exs"],
+      "ecto.reset": ["ecto.drop", "ecto.setup"],
+      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+    ]
   end
 end
