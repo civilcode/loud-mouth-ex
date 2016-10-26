@@ -1,4 +1,7 @@
 defmodule LoudMouth do
+  @moduledoc """
+  A port of the Shouty application from [Cucumber School](https://cucumber.io/school).
+  """
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
