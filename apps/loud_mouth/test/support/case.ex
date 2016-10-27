@@ -9,6 +9,7 @@ defmodule LoudMouth.Case do
       import Ecto.Changeset
       import Ecto.Query
       import LoudMouth.Case
+      import LoudMouth.Factory
     end
   end
 

@@ -48,7 +48,11 @@ defmodule LoudMouth.Mixfile do
       # PostgreSQL driver for Elixir
       {:postgrex, ">= 0.0.0"},
       # A database wrapper and language integrated query for Elixir
-      {:ecto, "~> 2.0.0"}
+      {:ecto, "~> 2.0.0"},
+      # ExMachina makes it easy to create test data and associations
+      {:ex_machina, "~> 1.0", only: :test},
+      # Faker is a pure Elixir library for generating fake data
+      {:faker, "~> 0.7.0", only: :test},
     ]
   end
 
