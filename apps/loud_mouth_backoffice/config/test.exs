@@ -8,12 +8,3 @@ config :loud_mouth_backoffice, LoudMouthBackoffice.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :loud_mouth_backoffice, LoudMouthBackoffice.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "loud_mouth_backoffice_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
