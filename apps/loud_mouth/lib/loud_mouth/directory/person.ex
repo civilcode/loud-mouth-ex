@@ -13,7 +13,12 @@ defmodule LoudMouth.Directory.Person do
     timestamps
   end
 
-  def new(params) do
-    struct(__MODULE__, params)
+  def new do
+    %__MODULE__{}
+  end
+
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> cast(params, [:email, :given_name, :family_name])
   end
 end

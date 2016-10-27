@@ -6,8 +6,8 @@ defmodule LoudMouth.Directory do
   alias LoudMouth.Repo
 
   def add_person(params) do
-    params
-    |> Person.new
+    Person.new
+    |> Person.changeset(params)
     |> Repo.insert
   end
 
