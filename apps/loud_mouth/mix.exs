@@ -53,6 +53,8 @@ defmodule LoudMouth.Mixfile do
       {:ex_machina, "~> 1.0", only: :test},
       # Faker is a pure Elixir library for generating fake data
       {:faker, "~> 0.7.0", only: :test},
+      # ValidField allows you to unit test changesets
+      {:valid_field, github: "DockYard/valid_field", only: :test},
     ]
   end
 

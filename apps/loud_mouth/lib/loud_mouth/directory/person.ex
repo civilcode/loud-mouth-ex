@@ -20,5 +20,6 @@ defmodule LoudMouth.Directory.Person do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:email, :given_name, :family_name])
+    |> validate_required(:email)
   end
 end
