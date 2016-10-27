@@ -4,12 +4,13 @@ defmodule LoudMouthAPI.Directory.PersonControllerTest do
 
   describe "POST /directory/person" do
     test "with valid params", %{conn: conn} do
-      person_params = %{email: "foo@bar.com", given_name: "John", family_name: "Smith"}
+      email = "someone@example.com"
+      person_params = params_for(:directory_person, email: email)
 
       conn = post conn, directory_person_path(conn, :create), %{person: person_params, format: "json-api"}
 
       person_json =
-        person_params.email
+        email
         |> Directory.fetch_person_by_email
         |> serialize
 
