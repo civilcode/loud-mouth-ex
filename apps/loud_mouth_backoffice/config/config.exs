@@ -7,7 +7,7 @@ use Mix.Config
 
 # General application configuration
 config :loud_mouth_backoffice,
-  ecto_repos: [LoudMouthBackoffice.Repo]
+  ecto_repos: []
 
 # Configures the endpoint
 config :loud_mouth_backoffice, LoudMouthBackoffice.Endpoint,
@@ -21,6 +21,14 @@ config :loud_mouth_backoffice, LoudMouthBackoffice.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+
+config :ex_admin,
+  repo: LoudMouth.Repo,
+  module: LoudMouthBackoffice,
+  modules: [
+    LoudMouthBackoffice.ExAdmin.Dashboard,
+    LoudMouthBackoffice.ExAdmin.Person
+  ]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

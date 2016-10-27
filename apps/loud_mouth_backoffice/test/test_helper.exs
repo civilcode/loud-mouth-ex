@@ -1,4 +1,3 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(LoudMouthBackoffice.Repo, :manual)
-
+Ecto.Adapters.SQL.Sandbox.mode(LoudMouth.Repo, :manual)
