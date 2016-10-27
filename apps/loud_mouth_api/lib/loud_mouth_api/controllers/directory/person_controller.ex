@@ -3,7 +3,7 @@ defmodule LoudMouthAPI.Directory.PersonController do
 
   alias LoudMouth.Directory
 
-  def create(conn, %{"person" => person_params}) do
+  def create(conn, %{"data" => %{"type" => "person", "attributes" => person_params}}) do
     {:ok, person} = Directory.add_person(person_params)
     conn
     |> put_status(:created)

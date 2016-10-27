@@ -21,6 +21,7 @@ defmodule LoudMouthAPI.ConnCase do
       use Phoenix.ConnTest
 
       import LoudMouthAPI.Router.Helpers
+      import LoudMouthAPI.JSONFor      
       import LoudMouth.Factory
       import JsonApiAssert
       import JsonApiAssert.Serializer, only: [serialize: 1]
