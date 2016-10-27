@@ -21,9 +21,9 @@ defmodule LoudMouthAPI.ConnCase do
       use Phoenix.ConnTest
 
       import LoudMouthAPI.Router.Helpers
+      import LoudMouth.Factory
       import JsonApiAssert
       import JsonApiAssert.Serializer, only: [serialize: 1]
-
 
       # The default endpoint for testing
       @endpoint LoudMouthAPI.Endpoint
