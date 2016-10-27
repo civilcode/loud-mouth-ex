@@ -5,8 +5,10 @@ defmodule LoudMouth.DirectoryTest do
   alias LoudMouth.Directory.Person
 
   test "adding a person" do
-    email = "foo@bar.com"
-    Directory.add_person(%{email: email, given_name: "John", family_name: "Doe"})
+    email = "someone@example.com"
+    params = params_for(:directory_person, email: email)
+
+    Directory.add_person(params)
 
     person = Directory.fetch_person_by_email(email)
     assert person
