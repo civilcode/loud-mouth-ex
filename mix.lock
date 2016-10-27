@@ -33,5 +33,7 @@
   "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []},
   "postgrex": {:hex, :postgrex, "0.12.1", "2f8b46cb3a44dcd42f42938abedbfffe7e103ba4ce810ccbeee8dcf27ca0fb06", [:mix], [{:connection, "~> 1.0", [hex: :connection, optional: false]}, {:db_connection, "~> 1.0-rc.4", [hex: :db_connection, optional: false]}, {:decimal, "~> 1.0", [hex: :decimal, optional: false]}]},
   "ranch": {:hex, :ranch, "1.2.1", "a6fb992c10f2187b46ffd17ce398ddf8a54f691b81768f9ef5f461ea7e28c762", [:make], []},
+  "scrivener": {:hex, :scrivener, "2.1.1", "eb52c8b7d283e8999edd6fd50d872ab870669d1f4504134841d0845af11b5ef3", [:mix], []},
+  "scrivener_ecto": {:git, "https://github.com/drewolson/scrivener_ecto.git", "df2c5720f763b002c48be1f132fbaaa594cfbeae", []},
   "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.1", "28a4d65b7f59893bc2c7de786dec1e1555bd742d336043fe644ae956c3497fbe", [:rebar, :make], []},
   "valid_field": {:git, "https://github.com/DockYard/valid_field.git", "6214dc23120629475502f68bb65497b1eea4851e", []}}
