@@ -1,4 +1,6 @@
 defmodule LoudMouth.Factory do
+  @moduledoc false
+  
   use ExMachina.Ecto, repo: LoudMouth.Repo
 
   def directory_person_factory do

@@ -10,7 +10,7 @@
       #
       # these are the files included in the analysis
       files: %{
-        excluded: [~r"/_build/", ~r"/deps/", ~r"/test/", ~r"/priv/"]
+        excluded: [~r"/_build/", ~r"/deps/", ~r"/priv/"]
       }
     }
   ]
