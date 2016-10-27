@@ -1,4 +1,7 @@
 defmodule LoudMouthBackoffice do
+  @moduledoc """
+  Provides a browser-based administration interface for LoudMouth domain.
+  """
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
