@@ -13,7 +13,7 @@ config :loud_mouth_api,
 config :loud_mouth_api, LoudMouthAPI.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "ZYqReS0V+i0dtzc4JnJxKXluZj5FRJnkz7e1a/REX99HUZ4Yljmk8F2U4Bc2EIim",
-  render_errors: [view: LoudMouthAPI.ErrorView, accepts: ~w(json)],
+  render_errors: [view: LoudMouthAPI.ErrorView, accepts: ~w(json-api)],
   pubsub: [name: LoudMouthAPI.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
