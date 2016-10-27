@@ -18,5 +18,15 @@ defmodule LoudMouthAPI.Directory.PersonControllerTest do
       |> json_response(201)
       |> assert_data(person_json)
     end
+
+    test "with invalid params", %{conn: conn} do
+      person_params = params_for(:directory_person, email: "")
+
+      conn = post conn, directory_person_path(conn, :create), json_for(:person, person_params)
+
+      conn
+      |> json_response(422)
+      |> assert_errors_on("email")
+    end
   end
 end

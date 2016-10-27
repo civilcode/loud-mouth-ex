@@ -20,11 +20,12 @@ defmodule LoudMouthAPI.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      import LoudMouthAPI.Router.Helpers
-      import LoudMouthAPI.JSONFor      
-      import LoudMouth.Factory
       import JsonApiAssert
       import JsonApiAssert.Serializer, only: [serialize: 1]
+      import LoudMouthAPI.Router.Helpers
+      import LoudMouthAPI.JSONFor
+      import LoudMouthAPI.JSONAssertions
+      import LoudMouth.Factory
 
       # The default endpoint for testing
       @endpoint LoudMouthAPI.Endpoint

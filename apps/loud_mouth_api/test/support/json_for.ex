@@ -6,7 +6,7 @@ defmodule LoudMouthAPI.JSONFor do
 
     %{
       "data" => %{
-        "type" =>  Atom.to_string(type) |> String.replace("_", "-"),
+        "type" =>  type |> Atom.to_string |> String.replace("_", "-"),
         "attributes" => attributes
       },
       "format" => "json-api"
