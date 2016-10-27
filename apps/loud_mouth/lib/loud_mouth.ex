@@ -1,4 +1,7 @@
 defmodule LoudMouth do
+  @moduledoc """
+  A port of the Shouty application from [Cucumber School](https://cucumber.io/school).
+  """
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -10,6 +13,7 @@ defmodule LoudMouth do
     children = [
       # Starts a worker by calling: LoudMouth.Worker.start_link(arg1, arg2, arg3)
       # worker(LoudMouth.Worker, [arg1, arg2, arg3]),
+      worker(LoudMouth.Repo, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
