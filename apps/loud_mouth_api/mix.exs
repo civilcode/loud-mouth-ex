@@ -37,13 +37,22 @@ defmodule LoudMouthAPI.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.2.1"},
-     {:phoenix_pubsub, "~> 1.0"},
-     {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+    [
+      # Standard Phoenix packages
+      {:phoenix, "~> 1.2.1"},
+      {:phoenix_pubsub, "~> 1.0"},
+      {:gettext, "~> 0.11"},
+      {:cowboy, "~> 1.0"},
       # PostgreSQL driver for Elixir
       {:postgrex, ">= 0.0.0"},
       # A database wrapper and language integrated query for Elixir
       {:ecto, "~> 2.0.0"},
+      # Composable assertions for JSON API payload
+      {:json_api_assert, "~> 0.0.2", only: :test},
+      # LoudMouth Domain
+      {:loud_mouth, in_umbrella: true},
+      # A serialization library implementing the jsonapi.org spec
+      {:ja_serializer, "~> 0.11.1"},
+    ]
   end
 end
