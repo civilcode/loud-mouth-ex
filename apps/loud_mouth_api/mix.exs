@@ -20,8 +20,12 @@ defmodule LoudMouthAPI.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {LoudMouthAPI, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext]]
+    [
+      mod: {LoudMouthAPI, []},
+      applications: [
+        :phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :ecto, :postgrex
+      ]
+    ]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,5 +40,9 @@ defmodule LoudMouthAPI.Mixfile do
      {:phoenix_pubsub, "~> 1.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"}]
+      # PostgreSQL driver for Elixir
+      {:postgrex, ">= 0.0.0"},
+      # A database wrapper and language integrated query for Elixir
+      {:ecto, "~> 2.0.0"},
   end
 end
