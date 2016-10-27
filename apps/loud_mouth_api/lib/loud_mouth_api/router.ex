@@ -5,7 +5,11 @@ defmodule LoudMouthAPI.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", LoudMouthAPI do
+  scope "/", LoudMouthAPI do
     pipe_through :api
+
+    scope "/directory", Directory, as: :directory do
+      resources "/person", PersonController, only: [:create]
+    end
   end
 end
