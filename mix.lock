@@ -4,10 +4,14 @@
   "cowboy": {:hex, :cowboy, "1.0.4", "a324a8df9f2316c833a470d918aaf73ae894278b8aa6226ce7a9bf699388f878", [:rebar, :make], [{:cowlib, "~> 1.0.0", [hex: :cowlib, optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, optional: false]}]},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], []},
   "credo": {:hex, :credo, "0.4.13", "0e9d0479c7e0591e36b093bf17fbdde012e2a69b5571e2df8d0b75b4fc8adc74", [:mix], [{:bunt, "~> 0.1.6", [hex: :bunt, optional: false]}]},
+  "csvlixir": {:hex, :csvlixir, "1.0.0", "e9fd30abfca2d312390060e86bb7ec52487c813824dcccad45bb13e85ecad6b1", [:mix], []},
   "db_connection": {:hex, :db_connection, "1.0.0", "63c03e520d54886a66104d34e32397ba960db6e74b596ce221592c07d6a40d8d", [:mix], [{:connection, "~> 1.0.2", [hex: :connection, optional: false]}, {:poolboy, "~> 1.5", [hex: :poolboy, optional: true]}, {:sbroker, "~> 1.0", [hex: :sbroker, optional: true]}]},
   "decimal": {:hex, :decimal, "1.2.0", "462960fd71af282e570f7b477f6be56bf8968e68277d4d0b641a635269bf4b0d", [:mix], []},
   "ecto": {:hex, :ecto, "2.0.5", "7f4c79ac41ffba1a4c032b69d7045489f0069c256de606523c65d9f8188e502d", [:mix], [{:db_connection, "~> 1.0-rc.4", [hex: :db_connection, optional: true]}, {:decimal, "~> 1.1.2 or ~> 1.2", [hex: :decimal, optional: false]}, {:mariaex, "~> 0.7.7", [hex: :mariaex, optional: true]}, {:poison, "~> 1.5 or ~> 2.0", [hex: :poison, optional: true]}, {:poolboy, "~> 1.5", [hex: :poolboy, optional: false]}, {:postgrex, "~> 0.12.0", [hex: :postgrex, optional: true]}, {:sbroker, "~> 1.0-beta", [hex: :sbroker, optional: true]}]},
+  "ex_admin": {:git, "https://github.com/smpallen99/ex_admin.git", "310b00c89a9f7719cdaf9796aee39b6904fd42b4", []},
   "ex_machina": {:hex, :ex_machina, "1.0.2", "1cc49e1a09e3f7ab2ecb630c17f14c2872dc4ec145d6d05a9c3621936a63e34f", [:mix], [{:ecto, "~> 2.0", [hex: :ecto, optional: true]}]},
+  "ex_queb": {:hex, :ex_queb, "0.2.2", "64756a8e1a4f64f806aa3bd3604302bb8654ae668b868957282106e81f9c9875", [:mix], [{:ecto, "~> 2.0", [hex: :ecto, optional: false]}]},
+  "exactor": {:hex, :exactor, "2.2.2", "90b27d72c05614801a60f8400afd4e4346dfc33ea9beffe3b98a794891d2ff96", [:mix], []},
   "excoveralls": {:hex, :excoveralls, "0.5.7", "5d26e4a7cdf08294217594a1b0643636accc2ad30e984d62f1d166f70629ff50", [:mix], [{:exjsx, "~> 3.0", [hex: :exjsx, optional: false]}, {:hackney, ">= 0.12.0", [hex: :hackney, optional: false]}]},
   "exjsx": {:hex, :exjsx, "3.2.1", "1bc5bf1e4fd249104178f0885030bcd75a4526f4d2a1e976f4b428d347614f0f", [:mix], [{:jsx, "~> 2.8.0", [hex: :jsx, optional: false]}]},
   "faker": {:hex, :faker, "0.7.0", "2c42deeac7be717173c78c77fb3edc749fb5d5e460e33d01fe592ae99acc2f0d", [:mix], []},
@@ -36,4 +40,5 @@
   "scrivener": {:hex, :scrivener, "2.1.1", "eb52c8b7d283e8999edd6fd50d872ab870669d1f4504134841d0845af11b5ef3", [:mix], []},
   "scrivener_ecto": {:git, "https://github.com/drewolson/scrivener_ecto.git", "df2c5720f763b002c48be1f132fbaaa594cfbeae", []},
   "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.1", "28a4d65b7f59893bc2c7de786dec1e1555bd742d336043fe644ae956c3497fbe", [:rebar, :make], []},
-  "valid_field": {:git, "https://github.com/DockYard/valid_field.git", "6214dc23120629475502f68bb65497b1eea4851e", []}}
+  "valid_field": {:git, "https://github.com/DockYard/valid_field.git", "6214dc23120629475502f68bb65497b1eea4851e", []},
+  "xain": {:hex, :xain, "0.6.0", "5b61cfe3ffc17904759ee30a699f9e0b1aefd943e996ee4cafea76e5b2f59e3a", [:mix], []}}

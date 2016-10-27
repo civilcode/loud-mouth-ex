@@ -46,6 +46,8 @@ defmodule LoudMouthBackoffice.Mixfile do
       {:cowboy, "~> 1.0"},
       # LoudMouth apps
       {:loud_mouth, in_umbrella: true},
+      # ExAdmin is an auto administration package
+      {:ex_admin, github: "smpallen99/ex_admin"},
     ]
   end
 
