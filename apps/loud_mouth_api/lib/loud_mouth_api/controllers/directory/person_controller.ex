@@ -21,4 +21,11 @@ defmodule LoudMouthAPI.Directory.PersonController do
     |> put_status(:unprocessable_entity)
     |> render("errors.json-api", data: changeset)
   end
+
+  def index(conn, _params) do
+    people = Directory.list_people
+
+    conn
+    |> render("index.json-api", data: people)
+  end
 end

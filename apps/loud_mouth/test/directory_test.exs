@@ -16,13 +16,17 @@ defmodule LoudMouth.DirectoryTest do
   end
 
   test "listing people" do
-    insert(:directory_person, email: "someone1@example.com")
-    insert(:directory_person, email: "someone2@example.com")
-    insert(:directory_person, email: "someone3@example.com")
+    emails = ["someone1@example.com", "someone2@example.com", "someone3@example.com"]
+    insert_people_with_email(emails)
 
     people = Directory.list_people
 
-    assert length(people) == 3
-    assert Enum.map(people, &(&1.email)) == ["someone1@example.com", "someone2@example.com", "someone3@example.com"]
+    assert length(people) == length(emails)
+    actual_emails = Enum.map(people, &(&1.email))
+    assert actual_emails == emails
+  end
+
+  defp insert_people_with_email(emails) do
+    Enum.each(emails, fn(email) ->   insert(:directory_person, email: email) end)
   end
 end
