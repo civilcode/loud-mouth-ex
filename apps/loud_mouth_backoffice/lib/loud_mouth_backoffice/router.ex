@@ -10,7 +10,7 @@ defmodule LoudMouthBackoffice.Router do
     plug :put_secure_browser_headers
   end
 
-  scope "/", ExAdmin do
+  scope "/backoffice", ExAdmin do
     pipe_through :browser
     admin_routes
   end

@@ -1,0 +1,33 @@
+{
+  "name": "Loud Mouth",
+  "description": "A port of the Shouty application from [Cucumber School](https://cucumber.io/school).",
+  "repository": "https://github.com/civilcode/loud_mouth_ex",
+  "keywords": ["elixir", "umbrella", "phoenix", "ecto"],
+  "success_url": "/",
+  "addons": ["heroku-postgresql:hobby-dev", "papertrail:choklad"],
+  "env": {
+    "MIX_ENV": "prod",
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "POOL_SIZE": {
+      "description": "Database pool size",
+      "value": "10"
+    },
+    "SETUP_BY": {
+      "description": "Who initiated this setup",
+      "value": "Hugo Frappier + Nicholas Henry"
+    }
+  },
+  "scripts": {
+    "postdeploy": "mix do ecto.migrate"
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git#4c8f063ac1cbd52f9c33736a3cc4d2d1761b6156"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git#ecf37abe246482734a82914be239d5447b229ffd"
+    }
+  ]
+}

@@ -12,6 +12,7 @@ config :loud_mouth_backoffice,
 # Configures the endpoint
 config :loud_mouth_backoffice, LoudMouthBackoffice.Endpoint,
   url: [host: "localhost"],
+  static_url: [host: "localhost", path: "/backoffice"],
   secret_key_base: "kFKVoUaKt0/TsSR8lVI9lWuDR+PqObl6vI+55HnhlwbZAPYa7sE1jHIVmf5yJBe8",
   render_errors: [view: LoudMouthBackoffice.ErrorView, accepts: ~w(html json)],
   pubsub: [name: LoudMouthBackoffice.PubSub,
