@@ -23,7 +23,7 @@ defmodule LoudMouth.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :ecto, :postgrex],
+    [applications: [:logger, :ecto, :postgrex, :scrivener_ecto],
      mod: {LoudMouth, []}]
   end
 
@@ -55,6 +55,8 @@ defmodule LoudMouth.Mixfile do
       {:faker, "~> 0.7.0", only: :test},
       # ValidField allows you to unit test changesets
       {:valid_field, github: "DockYard/valid_field", only: :test},
+      # Paginate your Ecto queries
+      {:scrivener_ecto, github: "drewolson/scrivener_ecto"}
     ]
   end
 

@@ -1,4 +1,4 @@
-defmodule LoudMouth.Case do
+defmodule LoudMouth.TestCase do
   @moduledoc false
 
   use ExUnit.CaseTemplate
@@ -10,7 +10,7 @@ defmodule LoudMouth.Case do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import LoudMouth.Case
+      import LoudMouth.TestCase
       import LoudMouth.Factory
     end
   end
