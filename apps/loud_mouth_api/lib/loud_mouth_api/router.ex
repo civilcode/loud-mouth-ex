@@ -9,7 +9,7 @@ defmodule LoudMouthAPI.Router do
     pipe_through :api
 
     scope "/directory", Directory, as: :directory do
-      resources "/person", PersonController, only: [:create]
+      resources "/person", PersonController, only: [:create, :index]
     end
   end
 end
