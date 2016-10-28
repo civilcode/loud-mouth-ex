@@ -14,4 +14,15 @@ defmodule LoudMouth.DirectoryTest do
     assert person
     assert %Person{email: ^email} = person
   end
+
+  test "listing people" do
+    insert(:directory_person, email: "someone1@example.com")
+    insert(:directory_person, email: "someone2@example.com")
+    insert(:directory_person, email: "someone3@example.com")
+
+    people = Directory.list_people
+
+    assert length(people) == 3
+    assert Enum.map(people, &(&1.email)) == ["someone1@example.com", "someone2@example.com", "someone3@example.com"]
+  end
 end

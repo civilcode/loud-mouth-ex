@@ -15,4 +15,8 @@ defmodule LoudMouth.Directory do
     Person
     |> Repo.get_by(email: email)
   end
+
+  def list_people do
+    Repo.all(Person)
+  end
 end
