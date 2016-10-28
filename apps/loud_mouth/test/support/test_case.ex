@@ -15,7 +15,13 @@ defmodule LoudMouth.TestCase do
     end
   end
 
-  setup _context do
+  setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(LoudMouth.Repo)
+
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(LoudMouth.Repo, {:shared, self()})
+    end
+
+    :ok
   end
 end

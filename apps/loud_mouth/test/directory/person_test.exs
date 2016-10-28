@@ -1,5 +1,5 @@
 defmodule LoudMouth.Directory.PersonTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   import ValidField
 
   alias LoudMouth.Directory.Person

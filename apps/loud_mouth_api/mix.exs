@@ -24,14 +24,14 @@ defmodule LoudMouthAPI.Mixfile do
     [
       mod: {LoudMouthAPI, []},
       applications: [
-        :phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :ecto, :postgrex
+        :phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :loud_mouth
       ]
     ]
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
-  defp elixirc_paths(_),     do: ["lib", "web"]
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.
   #
@@ -43,14 +43,10 @@ defmodule LoudMouthAPI.Mixfile do
       {:phoenix_pubsub, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      # PostgreSQL driver for Elixir
-      {:postgrex, ">= 0.0.0"},
-      # A database wrapper and language integrated query for Elixir
-      {:ecto, "~> 2.0.0"},
-      # Composable assertions for JSON API payload
-      {:json_api_assert, "~> 0.0.2", only: :test},
       # LoudMouth Domain
       {:loud_mouth, in_umbrella: true},
+      # Composable assertions for JSON API payload
+      {:json_api_assert, "~> 0.0.2", only: :test},
       # A serialization library implementing the jsonapi.org spec
       {:ja_serializer, "~> 0.11.1"},
     ]

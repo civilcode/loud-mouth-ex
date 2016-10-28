@@ -38,11 +38,7 @@ defmodule LoudMouthPlatform.Mixfile do
 
   defp aliases do
      [
-       "project.check": ["coveralls --umbrella", "credo"],
-       "ecto.setup": ["ecto.create", "ecto.migrate", "ecto.seed"],
-       "ecto.seed": ["run apps/loud_mouth/priv/repo/seeds.exs"],
-       "ecto.reset": ["ecto.drop", "ecto.setup"],
-       "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+       "project.check": ["coveralls --umbrella", "credo"]
      ]
    end
 end

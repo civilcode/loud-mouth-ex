@@ -1,5 +1,5 @@
 defmodule LoudMouthAPI.Directory.PersonControllerTest do
-  use LoudMouthAPI.ConnCase
+  use LoudMouthAPI.ConnCase, async: true
   alias LoudMouth.Directory
 
   describe "POST /directory/person" do
