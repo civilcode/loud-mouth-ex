@@ -1,0 +1,5 @@
+# apps/loud_mouth_backoffice
+cd ../loud_mouth_backoffice
+npm install
+brunch build --production
+mix phoenix.digest
