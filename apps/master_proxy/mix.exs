@@ -15,15 +15,22 @@ defmodule MasterProxy.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :cowboy, :plug, :loud_mouth_api, :loud_mouth_backoffice],
-     mod: {MasterProxy.Application, []}]
+    [
+      applications: [
+        :logger, :cowboy, :plug, :loud_mouth_api, :loud_mouth_backoffice, :loud_mouth_graphql
+      ],
+      mod: {MasterProxy.Application, []}
+    ]
   end
 
   defp deps do
-    [{:plug, "~> 1.2"},
-     {:cowboy, "~> 1.0"},
+    [
+      {:plug, "~> 1.2"},
+      {:cowboy, "~> 1.0"},
 
-     {:loud_mouth_api, in_umbrella: true},
-     {:loud_mouth_backoffice, in_umbrella: true}]
+      {:loud_mouth_api, in_umbrella: true},
+      {:loud_mouth_backoffice, in_umbrella: true},
+      {:loud_mouth_graphql, in_umbrella: true}      
+    ]
   end
 end

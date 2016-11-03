@@ -5,7 +5,7 @@ defmodule LoudMouthGraphQL.EndpointTest do
     person1 = insert(:directory_person, email: "someone1@example.com")
     person2 = insert(:directory_person, email: "someone2@example.com")
 
-    conn = get conn, "/?query=query+{directoryPeople{id+email}}"
+    conn = get conn, "/graphql/?query=query+{directoryPeople{id+email}}"
 
     [person1_as_json, person2_as_json] =
       conn
