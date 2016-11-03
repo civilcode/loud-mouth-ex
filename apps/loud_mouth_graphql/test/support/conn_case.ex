@@ -21,6 +21,7 @@ defmodule LoudMouthGraphql.ConnCase do
       use Phoenix.ConnTest
 
       import LoudMouthGraphql.Router.Helpers
+      import LoudMouth.Factory      
 
       # The default endpoint for testing
       @endpoint LoudMouthGraphql.Endpoint
@@ -28,6 +29,11 @@ defmodule LoudMouthGraphql.ConnCase do
   end
 
   setup tags do
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LoudMouth.Repo)
+
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(LoudMouth.Repo, {:shared, self()})
+    end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
