@@ -1,11 +1,6 @@
 defmodule LoudMouthGraphQL.Router do
   use LoudMouthGraphQL.Web, :router
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
-  scope "/api", LoudMouthGraphQL do
-    pipe_through :api
-  end
+  forward "/graphiql", Absinthe.Plug.GraphiQL, schema: LoudMouthGraphQL.Schema
+  forward "/", Absinthe.Plug, schema: LoudMouthGraphQL.Schema
 end
