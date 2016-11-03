@@ -1,4 +1,7 @@
 defmodule LoudMouthGraphql do
+  @moduledoc """
+  A GraphQL interface for the LoudMouth domain.
+  """
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
