@@ -1,4 +1,4 @@
-defmodule LoudMouthGraphQL.Schema.Directory.Types do
+defmodule LoudMouthGraphQL.Directory.Schema.Types do
   use Absinthe.Schema.Notation
 
   object :person do
