@@ -1,4 +1,4 @@
-defmodule LoudMouthGraphql.Mixfile do
+defmodule LoudMouthGraphQL.Mixfile do
   use Mix.Project
 
   def project do
@@ -20,7 +20,7 @@ defmodule LoudMouthGraphql.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {LoudMouthGraphql, []},
+    [mod: {LoudMouthGraphQL, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :loud_mouth]]
   end
 

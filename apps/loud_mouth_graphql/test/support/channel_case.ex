@@ -1,4 +1,4 @@
-defmodule LoudMouthGraphql.ChannelCase do
+defmodule LoudMouthGraphQL.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -22,7 +22,7 @@ defmodule LoudMouthGraphql.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint LoudMouthGraphql.Endpoint
+      @endpoint LoudMouthGraphQL.Endpoint
     end
   end
 

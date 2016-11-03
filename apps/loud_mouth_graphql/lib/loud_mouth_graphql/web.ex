@@ -1,12 +1,12 @@
-defmodule LoudMouthGraphql.Web do
+defmodule LoudMouthGraphQL.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use LoudMouthGraphql.Web, :controller
-      use LoudMouthGraphql.Web, :view
+      use LoudMouthGraphQL.Web, :controller
+      use LoudMouthGraphQL.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -26,8 +26,8 @@ defmodule LoudMouthGraphql.Web do
     quote do
       use Phoenix.Controller
 
-      import LoudMouthGraphql.Router.Helpers
-      import LoudMouthGraphql.Gettext
+      import LoudMouthGraphQL.Router.Helpers
+      import LoudMouthGraphQL.Gettext
     end
   end
 
@@ -38,9 +38,9 @@ defmodule LoudMouthGraphql.Web do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
 
-      import LoudMouthGraphql.Router.Helpers
-      import LoudMouthGraphql.ErrorHelpers
-      import LoudMouthGraphql.Gettext
+      import LoudMouthGraphQL.Router.Helpers
+      import LoudMouthGraphQL.ErrorHelpers
+      import LoudMouthGraphQL.Gettext
     end
   end
 
@@ -53,7 +53,7 @@ defmodule LoudMouthGraphql.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import LoudMouthGraphql.Gettext
+      import LoudMouthGraphQL.Gettext
     end
   end
 

@@ -6,11 +6,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :loud_mouth_graphql, LoudMouthGraphql.Endpoint,
+config :loud_mouth_graphql, LoudMouthGraphQL.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "zmVOMJiDTHZnkc+KojBEntE1oDTEXEprcK/KXsButvm+yv7cT4uAa6aVgSPpHCnI",
-  render_errors: [view: LoudMouthGraphql.ErrorView, accepts: ~w(json)],
-  pubsub: [name: LoudMouthGraphql.PubSub,
+  render_errors: [view: LoudMouthGraphQL.ErrorView, accepts: ~w(json)],
+  pubsub: [name: LoudMouthGraphQL.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

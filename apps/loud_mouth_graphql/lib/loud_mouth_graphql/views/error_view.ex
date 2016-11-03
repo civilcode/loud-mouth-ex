@@ -1,5 +1,5 @@
-defmodule LoudMouthGraphql.ErrorView do
-  use LoudMouthGraphql.Web, :view
+defmodule LoudMouthGraphQL.ErrorView do
+  use LoudMouthGraphQL.Web, :view
 
   def render("404.json", _assigns) do
     %{errors: %{detail: "Page not found"}}

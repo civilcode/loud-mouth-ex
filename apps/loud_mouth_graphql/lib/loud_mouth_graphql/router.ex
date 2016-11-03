@@ -1,11 +1,11 @@
-defmodule LoudMouthGraphql.Router do
-  use LoudMouthGraphql.Web, :router
+defmodule LoudMouthGraphQL.Router do
+  use LoudMouthGraphQL.Web, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", LoudMouthGraphql do
+  scope "/api", LoudMouthGraphQL do
     pipe_through :api
   end
 end

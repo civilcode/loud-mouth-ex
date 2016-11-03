@@ -1,4 +1,4 @@
-# LoudMouthGraphql
+# LoudMouthGraphQL
 
 To start your Phoenix app:
 

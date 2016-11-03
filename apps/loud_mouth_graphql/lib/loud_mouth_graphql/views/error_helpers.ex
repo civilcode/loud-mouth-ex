@@ -1,4 +1,4 @@
-defmodule LoudMouthGraphql.ErrorHelpers do
+defmodule LoudMouthGraphQL.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -21,9 +21,9 @@ defmodule LoudMouthGraphql.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(LoudMouthGraphql.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(LoudMouthGraphQL.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(LoudMouthGraphql.Gettext, "errors", msg, opts)
+      Gettext.dgettext(LoudMouthGraphQL.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -1,7 +1,7 @@
-defmodule LoudMouthGraphql.Endpoint do
+defmodule LoudMouthGraphQL.Endpoint do
   use Phoenix.Endpoint, otp_app: :loud_mouth_graphql
 
-  socket "/socket", LoudMouthGraphql.UserSocket
+  socket "/socket", LoudMouthGraphQL.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -36,5 +36,5 @@ defmodule LoudMouthGraphql.Endpoint do
     key: "_loud_mouth_graphql_key",
     signing_salt: "w7d/ol3R"
 
-  plug LoudMouthGraphql.Router
+  plug LoudMouthGraphQL.Router
 end
