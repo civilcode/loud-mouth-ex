@@ -4,6 +4,7 @@ defmodule LoudMouthGraphQL.Directory.Schema do
   alias LoudMouthGraphQL.Directory.PersonResolver
 
   query do
+    @desc "List of people"
     field :people, list_of(:person) do
       resolve &PersonResolver.all/2
     end
@@ -11,7 +12,7 @@ defmodule LoudMouthGraphQL.Directory.Schema do
 
   mutation do
     @desc "Add a person"
-    field :person, type: :person do
+    field :add_person, type: :person do
       arg :given_name, non_null(:string)
       arg :family_name, non_null(:string)
       arg :email, non_null(:string)

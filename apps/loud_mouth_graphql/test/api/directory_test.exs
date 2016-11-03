@@ -25,8 +25,8 @@ defmodule LoudMouthGraphQL.Endpoints.DirectoryTest do
       email = "someone@example.com"
       person_params = params_for(:directory_person, email: email)
       mutation = ~s[
-        mutation AddPerson {
-          person(
+        mutation {
+          addPerson(
             given_name: "#{person_params.given_name}"
             family_name: "#{person_params.family_name}"
             email: "#{person_params.email}"
@@ -41,7 +41,7 @@ defmodule LoudMouthGraphQL.Endpoints.DirectoryTest do
       person_as_json =
         conn
         |> json_response(200)
-        |> get_in(["data", "person"])
+        |> get_in(["data", "addPerson"])
 
       assert_field(person_as_json, "email", person_params.email)
     end
@@ -49,8 +49,8 @@ defmodule LoudMouthGraphQL.Endpoints.DirectoryTest do
     test "with invalid params", %{conn: conn} do
       person_params = params_for(:directory_person, email: "")
       mutation = ~s[
-        mutation AddPerson {
-          person(
+        mutation {
+          addPerson(
             email: "#{person_params.email}"
             given_name: "#{person_params.given_name}"
             family_name: "#{person_params.family_name}"
