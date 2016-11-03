@@ -1,7 +1,7 @@
 defmodule LoudMouthGraphQL.Endpoints.DirectoryTest do
   use LoudMouthGraphQL.ConnCase
 
-  test "200 OK", %{conn: conn} do
+  test "list people", %{conn: conn} do
     person1 = insert(:directory_person, email: "someone1@example.com")
     person2 = insert(:directory_person, email: "someone2@example.com")
 
