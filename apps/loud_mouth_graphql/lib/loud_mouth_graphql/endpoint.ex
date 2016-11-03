@@ -36,5 +36,5 @@ defmodule LoudMouthGraphQL.Endpoint do
     key: "_loud_mouth_graphql_key",
     signing_salt: "w7d/ol3R"
 
-  plug LoudMouthGraphQL.Router
+    plug Absinthe.Plug, schema: LoudMouthGraphQL.Schema
 end

@@ -20,8 +20,12 @@ defmodule LoudMouthGraphQL.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {LoudMouthGraphQL, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :loud_mouth]]
+    [
+      mod: {LoudMouthGraphQL, []},
+      applications: [
+       :phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :absinthe_plug, :loud_mouth
+      ]
+    ]
   end
 
   # Specifies which paths to compile per environment.
@@ -32,11 +36,15 @@ defmodule LoudMouthGraphQL.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.2.1"},
-     {:phoenix_pubsub, "~> 1.0"},
-     {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"},
-     {:loud_mouth, in_umbrella: true}
-   ]
+    [
+      {:phoenix, "~> 1.2.1"},
+      {:phoenix_pubsub, "~> 1.0"},
+      {:gettext, "~> 0.11"},
+      {:cowboy, "~> 1.0"},
+      # Domain
+      {:loud_mouth, in_umbrella: true},
+      # Plug support for Absinthe, GraphQL for Elixir
+      {:absinthe_plug, "~> 1.2.0-alpha0"}
+    ]
   end
 end
