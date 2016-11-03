@@ -44,7 +44,9 @@ defmodule LoudMouthGraphQL.Mixfile do
       # Domain
       {:loud_mouth, in_umbrella: true},
       # Plug support for Absinthe, GraphQL for Elixir
-      {:absinthe_plug, "~> 1.2.0-alpha0"}
+      {:absinthe_plug, "~> 1.2.0-alpha0"},
+      # Automatically run your Elixir project's tests each time you save a file
+      {:mix_test_watch, "~> 0.2", only: :dev}
     ]
   end
 end
