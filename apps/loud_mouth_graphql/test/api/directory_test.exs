@@ -45,5 +45,29 @@ defmodule LoudMouthGraphQL.Endpoints.DirectoryTest do
 
       assert_field(person_as_json, "email", person_params.email)
     end
+
+    test "with invalid params", %{conn: conn} do
+      person_params = params_for(:directory_person, email: "")
+      mutation = ~s[
+        mutation AddPerson {
+          person(
+            email: "#{person_params.email}"
+            given_name: "#{person_params.given_name}"
+            family_name: "#{person_params.family_name}"
+          ) {
+            email
+          }
+        }
+      ]
+
+      conn = post conn, "/graphql/directory", query: mutation
+
+      error = conn
+        |> json_response(200)
+        |> Map.get("errors")
+        |> hd
+
+      assert String.contains?(error["message"], "email can't be blank")
+    end
   end
 end
