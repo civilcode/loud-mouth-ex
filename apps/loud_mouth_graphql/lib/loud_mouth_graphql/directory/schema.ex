@@ -8,6 +8,13 @@ defmodule LoudMouthGraphQL.Directory.Schema do
     field :people, list_of(:person) do
       resolve &PersonResolver.all/2
     end
+
+    @desc "Get a person by email"
+    field :person, :person do
+      arg :email, non_null(:string)
+
+      resolve &PersonResolver.get_by_email/2
+    end
   end
 
   mutation do

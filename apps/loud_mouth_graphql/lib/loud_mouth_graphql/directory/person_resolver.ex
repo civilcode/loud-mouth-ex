@@ -3,6 +3,10 @@ defmodule LoudMouthGraphQL.Directory.PersonResolver do
     {:ok, LoudMouth.Directory.list_people }
   end
 
+  def get_by_email(%{email: email}, _info) do
+    {:ok, LoudMouth.Directory.fetch_person_by_email(email) }
+  end
+
   def create(args, _info) do
     case LoudMouth.Directory.add_person(args) do
       {:ok, person} -> {:ok, person}

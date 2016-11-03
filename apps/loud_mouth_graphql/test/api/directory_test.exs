@@ -70,4 +70,25 @@ defmodule LoudMouthGraphQL.Endpoints.DirectoryTest do
       assert String.contains?(error["message"], "email can't be blank")
     end
   end
+
+  test "get person by email", %{conn: conn} do
+    person = insert(:directory_person)
+
+    query = ~s[
+      query {
+        person(email: "#{person.email}") {
+          email
+        }
+      }
+    ]
+
+    conn = post conn, "/graphql/directory", query: query
+
+    person_as_json =
+      conn
+      |> json_response(200)
+      |> get_in(["data", "person"])
+
+    assert_field(person_as_json, "email", person.email)
+  end
 end
