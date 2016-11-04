@@ -1,10 +1,11 @@
 defmodule LoudMouthGraphQL.Directory.PersonResolver do
+  @moduledoc false
   def all(_args, _info) do
-    {:ok, LoudMouth.Directory.list_people }
+    {:ok, LoudMouth.Directory.list_people}
   end
 
   def get_by_email(%{email: email}, _info) do
-    {:ok, LoudMouth.Directory.fetch_person_by_email(email) }
+    {:ok, LoudMouth.Directory.fetch_person_by_email(email)}
   end
 
   def create(args, _info) do
@@ -15,7 +16,8 @@ defmodule LoudMouthGraphQL.Directory.PersonResolver do
   end
 
   def errors_from(changeset) do
-    Ecto.Changeset.traverse_errors(changeset, &LoudMouthGraphQL.ErrorHelpers.translate_error/1)
+    changeset
+    |> Ecto.Changeset.traverse_errors(&LoudMouthGraphQL.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: "#{key} #{msg}" end)
     |> Enum.join("|")
   end

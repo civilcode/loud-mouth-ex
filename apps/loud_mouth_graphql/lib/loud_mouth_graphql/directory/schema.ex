@@ -1,4 +1,6 @@
 defmodule LoudMouthGraphQL.Directory.Schema do
+  @moduledoc false
+
   use Absinthe.Schema
   import_types LoudMouthGraphQL.Directory.Schema.Types
   alias LoudMouthGraphQL.Directory.PersonResolver
